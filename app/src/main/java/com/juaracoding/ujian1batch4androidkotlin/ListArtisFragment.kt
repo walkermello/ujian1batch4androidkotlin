@@ -1,6 +1,7 @@
 package com.juaracoding.ujian1batch4androidkotlin
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -110,13 +111,15 @@ class ListArtisFragment : Fragment() {
         recyclerView.adapter = ArticleAdapter(articles) { article ->
 
             val orientation = resources.configuration.orientation
-            if(orientation == //tambahkan disini jika landscape) {
-               parentFragmentManager.beginTransaction()
+            if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                // Jika landscape, tampilkan detail di sisi
+                parentFragmentManager.beginTransaction()
                     .replace(R.id.sideDetail, ListDetailFragment.newInstance(article, ""))
                     .commit()
-            }else {
+            } else {
+                // Jika portrait, ganti fragment
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.frmFragment, ListDetailFragment.newInstance(article,""))
+                    .replace(R.id.frmFragment, ListDetailFragment.newInstance(article, ""))
                     .addToBackStack(null)
                     .commit()
             }

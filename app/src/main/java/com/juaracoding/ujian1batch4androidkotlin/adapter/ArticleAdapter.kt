@@ -12,10 +12,12 @@ class ArticleAdapter(private val articles: List<Article>, private val clickListe
 
     inner class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(article: Article) {
-            itemView.findViewById<ImageView>(R.id.articleImage).setImageResource(//tambahakan disini)
-            itemView.findViewById<TextView>(R.id.articleTitle).text = //tambahkan disini
-            itemView.findViewById<TextView>(R.id.articleOverview).text = //tambahkan disini
+            // Mengatur gambar dan teks dari artikel
+            itemView.findViewById<ImageView>(R.id.articleImage).setImageResource(article.imageResourceId)
+            itemView.findViewById<TextView>(R.id.articleTitle).text = article.title
+            itemView.findViewById<TextView>(R.id.articleOverview).text = article.overview
 
+            // Menangani klik item
             itemView.setOnClickListener { clickListener(article) }
         }
     }
@@ -29,5 +31,5 @@ class ArticleAdapter(private val articles: List<Article>, private val clickListe
         holder.bind(articles[position])
     }
 
-    override fun getItemCount() = //tambahkan disini
+    override fun getItemCount() = articles.size
 }
