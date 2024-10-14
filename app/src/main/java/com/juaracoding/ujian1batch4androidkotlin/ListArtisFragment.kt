@@ -123,14 +123,16 @@ class ListArtisFragment : Fragment() {
                     .addToBackStack(null)
                     .commit()
             }
-
-
-
-
         }
-
-
-
+        // Jika orientasi landscape, tampilkan Chelsea Islan secara default
+        if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            val defaultArticle = articles.find { it.title == "Chelsea Islan" }
+            defaultArticle?.let {
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.sideDetail, ListDetailFragment.newInstance(it, ""))
+                    .commit()
+            }
+        }
     }
 
     companion object {
