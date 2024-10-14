@@ -38,16 +38,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/roboto"
-                android:text="Lyodra Ginting adalah salah satu aktris yang berhasil masuk ke dalam daftar 100 wajah tercantik pada tahun 2021 dari versi TC Candler. Penyanyi ini lahir pada tanggal 21 Juni 2003 di Medan. Kemudian, ia berhasil meraih posisi paling tinggi untuk artis wanita Indonesia pada daftar 100 Most Beautiful Faces 2021." />
+                android:fontFamily="@font/roboto"/>
 
             <TextView
                 android:id="@+id/articleDetailDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/roboto"
-                android:text="Lyodra Ginting adalah salah satu aktris yang berhasil masuk ke dalam daftar 100 wajah tercantik pada tahun 2021 dari versi TC Candler. Penyanyi ini lahir pada tanggal 21 Juni 2003 di Medan. Kemudian, ia berhasil meraih posisi paling tinggi untuk artis wanita Indonesia pada daftar 100 Most Beautiful Faces 2021." />
+                android:fontFamily="@font/roboto"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

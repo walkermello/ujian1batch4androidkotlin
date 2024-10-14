@@ -17,6 +17,9 @@ class DetailActivity : AppCompatActivity() {
 
         if (article != null) {
             supportActionBar?.title = article.title
+            findViewById<ImageView>(R.id.articleDetailImage).setImageResource(article.imageResourceId)
+            findViewById<TextView>(R.id.articleDetailTitle).text = article.title
+            findViewById<TextView>(R.id.articleDetailOverview).text = article.overview
         }
 
         val shareButton = findViewById<Button>(R.id.btnShare)

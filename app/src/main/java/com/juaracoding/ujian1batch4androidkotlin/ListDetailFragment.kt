@@ -51,6 +51,9 @@ class ListDetailFragment : Fragment() {
             view.findViewById<ImageView>(R.id.articleDetailImage)
                 .setImageResource(article.imageResourceId)
            //tambahkan sisanya disini
+            view.findViewById<TextView>(R.id.articleDetailTitle).text = article.title
+            view.findViewById<TextView>(R.id.articleDetailOverview).text = article.overview
+            view.findViewById<TextView>(R.id.articleDetailDescription).text = article.description
         }
     }
 
